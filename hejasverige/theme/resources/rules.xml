@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules  xmlns="http://namespaces.plone.org/diazo" 
+		xmlns:css="http://namespaces.plone.org/diazo/css" 
+		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+		xmlns:xi="http://www.w3.org/2001/XInclude"		
+		>
+
+	<rules css:if-content="#visual-portal-wrapper">
+
+		<theme href="valkommen-till-heja-sverige.html" css:if-content="body.section-valkommen-till-heja-sverige" />
+		<theme href="om-heja-sverige.html" css:if-content="body.section-om-heja-sverige" />
+		<theme href="forening.html" css:if-content="body.section-forening" />
+		<theme href="medlem.html" css:if-content="body.section-medlem"/>
+		<theme href="kontakt.html" css:if-content="body.section-kontakt"/>
+		<theme href="support.html" css:if-content="body.section-support"/>
+		<theme href="min_sida_start.html" css:if-content="body.section-mina-sidor"/>
+		<!--theme href="min_sida_start.html" css:if-content="body.section-logged_out"/-->
+
+
+		<!-- Head elements -->
+		<replace css:theme="html head title" css:content="html head title" />
+		<after css:theme-children="html head" css:content="html head base" />
+		<after css:theme-children="html head" css:content="html head script" />
+
+
+		<!-- Main navigation -->
+		<replace css:content="ul#portal-globalnav" theme="/html/body/div/header/nav/ul" />
+		
+		<!-- Main Content -->
+		<replace css:theme="section#innehall article" css:content="div#content" />
+
+		<!-- portlet NavigationTree (MINA SIDOR) -->
+		<replace css:if-content="" css:content="div#portal-column-two.cell dl.portletNavigationTree dt.portletHeader a.tile" css:theme="a.menu_min_sida" />
+
+		<!-- if not content: replace with link to loginpage -->
+		<merge attributes="class" css:content="a#personaltools-login" css:theme="a.menu_min_sida" />
+		<replace css:if-content="a#personaltools-login" css:content="ul#portal-personaltools" css:theme="a.menu_min_sida"/>
+
+
+		<!-- Footer -->
+		<replace  theme="/html/body/div/footer/nav/ul" css:content="ul#portal-globalnav" />
+
+
+		<!-- Content specific rules -->
+		<!-- HEM -->				
+	    <rules css:if-content="body.section-valkommen-till-heja-sverige">
+	    	
+	    	<!-- Login -->
+		    <drop css:content="dl.portletLogin dt.portletHeader" />
+	    	<strip css:content="form#loginform div.field" />
+	    	<replace css:if-content="" css:theme="form#start_inlogg" css:content="dl.portletLogin" />
+		    <drop css:if-not-content="dl.portletLogin" css:theme="form#start_inlogg" />
+
+			<!-- Carousel -->
+			<replace css:theme="figure#bildspel_cont" css:content="div#carousel-front-page" />
+			<drop css:content="div.carousel-pager" />
+
+			<!-- Event -->
+			<replace theme="//section[@id='event']/article/p" css:content-children="dl.portletEvents dd.portletItem" />
+			<replace css:theme="div#event_rubrik h2.orange" css:content="dl.portletEvents dt.portletHeader a" />
+			<replace css:if-content="" theme="//section[@id='event']/article/aside/a" css:content="dl.portletEvents dd.portletFooter a" />
+
+			<!-- News -->
+			<replace theme="//section[@id='nyheter']/article/p" css:content-children="dl.portletNews dd.portletItem" />
+			<replace css:theme="div#nyheter_rubrik h2.orange" css:content="dl.portletNews dt.portletHeader a" />
+			<replace theme="//section[@id='nyheter']/article/aside/a" css:content="dl.portletNews dd.portletFooter a" />				
+
+	    </rules>
+
+		<!-- OM OSS om-heja-sverige  -->
+	    <rules css:if-content="body.section-om-heja-sverige">
+		</rules>
+
+		<!-- MEDLEM medlem  -->
+	    <rules css:if-content="body.section-medlem">
+				
+		</rules>	
+
+		<!-- FÖREING forening  -->
+	    <rules css:if-content="body.section-forening">
+		</rules>	
+
+		<!-- KONTAKT kontakt  -->
+	    <rules css:if-content="body.section-kontakt">
+			
+				
+		</rules>		
+
+		<!-- SUPPORT support  -->
+	    <rules css:if-content="body.section-support">
+				
+		</rules>	
+		
+		<!-- MINA SIDOR mina-sidor  -->
+	    <rules css:if-content="body.section-mina-sidor">
+
+	    	<!-- profile portlet -->
+			<replace css:theme-children="section#profil" css:content="div#portal-column-one" />				
+				
+		</rules>
+        
+        <!--replace css:theme="#langue li:first-child" css:if-content="#portal-languageselector .language-en.currentLanguage">
+            <li><a rel="alternate" hreflang="fr"><xsl:apply-templates select="//*[@id='portal-languageselector']//li//a/@*[name()='href' or name()='title']"/>français</a></li>
+        </replace-->
+
+
+	</rules>
+</rules>

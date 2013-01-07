@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Heja Sverige - Start</title>
+
+<link rel="stylesheet" href="style.css" />
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+<script src="js/html5.js"></script>
+<script src="js/clear_input.js"></script>
+<script src="js/tabs.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+<div class="wrapper">
+
+	<!--SIDHUVUD-->
+    <header>
+    	<img src="images/heja_sverige_logotyp.png" alt="!Heja Sverige Logotyp" style="position:absolute; z-index:50;" />
+        <nav class="menu">
+        	<ul>
+            	<li><a href="#" class="current-menu-item">!Hem</a></li>
+                <li><a href="undersida.html">!Om oss</a></li>
+                <li><a href="undersida.html">!Medlem</a></li>
+                <li><a href="undersida.html">!Förening</a>
+                	<ul class="sub-menu">
+                        <li><a href="#">!Exempelsida 1</a></li>
+                        <li><a href="#">!Exempelsida 2</a></li>
+                        <li><a href="#">!Exempelsida 3</a></li>
+                        <li><a href="#">!Exempelsida 4</a></li>
+                        <li><a href="#">!Exempelsida 5</a></li>
+                        <li><a href="#">!Exempelsida 6</a></li>
+            		</ul>
+                </li>
+                <li><a href="#">!Kontakt</a></li>
+                <li><a href="undersida.html">!Support</a></li>
+            </ul>
+            <div id="mina_sidor_nav">
+				<a href="min_sida_start.html" class="menu_min_sida">!Mina sidor</a>
+			</div>
+        </nav>
+    </header>
+    
+    <!--BILDSPEL-->
+    <section id="bildspel" class="block">
+        <div id="bildspel_nav">
+            <a href="#" class="carousel-pager-button-next"></a>
+            <a href="#" class="carousel-pager-button-prev"></a>
+        </div>
+        <figure id="bildspel_cont">
+                <img src="images/bildspel.jpg" alt="bildspel"  />
+                <figcaption class="bildspel_caption">
+                        <h2 class="orange">!Lorem Ipsum</h2>
+                        <p>!Fusce ipsum nisi, convallis a sodales in, egestas non enim. Sed sapien ligula, malesuada in 
+        viverra at, laoreet at lacus. Curabitur vitae lectus in massa dignissim adipiscing.</p>
+                </figcaption>
+        </figure>
+    </section>
+    
+    <!--INNEHÅLL-->
+	<section id="main">
+        <section id="inlogg_hitta_sok" class="tabb_grupp">
+        	<!--TABBGRUPP 1-->
+        	<div class="tabb_container">
+            	<ul class="tab_nav">
+                	<li class="ui-tabs-active ui-state-active"><a href="#tabs-1">Logga in</a></li>
+                    <li><a href="#tabs-2">!Hitta butiker</a></li>
+                    <li><a href="#tabs-3">!S&ouml;k bland v&aring;ra partners</a></li>
+                </ul>
+                <div class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-1" role="tabpanel" aria-expanded="true" aria-hidden="false" id="tabs-1">
+                <form name="logga_in" id="start_inlogg">
+                    <label for="anv" class="orange" style="display:block;clear:both;margin-bottom:5px;">!Logga in</label>
+                    <input type="text" name="anv" value="!Anv&auml;ndarnamn" class="inputbox" onFocus="myFocus(this)" onBlur="myBlur(this)" />
+                    <input type="password" name="losenord" value="!L&ouml;senord" class="inputbox" onFocus="myFocus(this)" onBlur="myBlur(this)" />
+                    <input type="submit" name="submit" class="submit" value="!Logga In" />
+                </form>
+                </div>
+                <div id="tabs-2">
+                	<!--INNEHÅLL-->
+                </div>
+                <div id="tabs-3">
+                	<!--INNEHÅLL-->
+                </div>
+            </div>
+        </section>
+        
+        <!--TABBGRUPP 2-->
+        <section id="hur_forening_medlem" class="tabb_grupp">
+            <div class="tabb_container">
+            	<ul class="tab_nav">
+                	<li class="ui-tabs-active ui-state-active"><a href="#tabs-1">Hur funkar det?</a></li>
+                    <li><a href="#tabs-2">!F&ouml;rening</a></li>
+                    <li><a href="#tabs-3">!Medlemskap</a></li>
+                </ul>
+                <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+                    <article class="divider">
+                        !1.Som medlem handlar du varor hos Hej Sverige-anslutna butiker till butikspris
+                    </article>
+                    <article class="divider">
+                        !2. Ditt köp registreras i befintliga kassasystem eller i separat Heja Sverige-terminal. Du kan även enkelt registrera dina egna betalkort.
+                    </article>
+                    <article class="divider-last">
+                        !3. Återbäring från dina inköpförmedlas till ditt medlems- och förenings konto. Pengar du kan använda till idrott, hälsa och friskvård.
+                    </article>
+                </div>
+                <div id="tabs-2" >
+                	<!--INNEHÅLL-->
+                </div>
+                <div id="tabs-3">
+                	<!--INNEHÅLL-->
+                </div>
+            </div>
+        </section> 
+        
+        <section id="event" class="banderoll_v block">
+        	<div id="event_rubrik">
+            	<h2 class="orange">!Event</h2>
+            </div>
+            <article>
+                <p>!Pellentesque et viverra sapien. In dictum gravida fringilla. Suspendisse scelerisque nibh consequat sapien ornare pulvinar.</p>
+                <aside><a href="#">!Läs mer...</a></aside>
+            </article>
+        </section>
+        <section id="nyheter" class="banderoll_h block">
+        	<div id="nyheter_rubrik">
+            	<h2 class="orange">!Nyheter</h2>
+            </div>
+            <article>
+                <p>!Pellentesque et viverra sapien. In dictum gravida fringilla. Suspendisse scelerisque nibh consequat sapien ornare pulvinar.</p>
+                <aside><a href="#">!Läs mer...</a></aside>
+            </article>
+        </section>
+        
+	</section>
+    
+    <!--SIDFÄLT-->
+	<aside class="sidebar">
+         <div id="annons" class="block">
+         </div>
+         <div id="annons" class="block">
+         </div>
+         <div id="annons" class="block">
+         </div>
+         <div id="annons" class="block">
+         </div>
+    </aside>
+    
+    <!--SIDFOT-->
+    <footer>
+    	<section id="logotyper">
+        	<img src="images/ica.png" alt="ICA" />
+            <img src="images/apotek.png" alt="Apoteket Hj&auml;rtat" />
+            <img src="images/elon.png" alt="ElOn" />
+            <img src="images/sats.png" alt="SATS" />
+            <img src="images/olearys.png" alt="O&acute;Learys" />
+        </section>
+        <div class="copy_foot">
+        	!Copyright Heja Sverige 2012
+        </div>
+        <nav class="foot_nav">
+        	<ul>
+        		<li><a href="#">!Hem</a></li>
+                <li><a href="#">!Om oss</a></li>
+                <li><a href="#">!Medlem</a></li>
+                <li><a href="#">!Förening</a></li>
+                <li><a href="#">!Kontakt</a></li>
+                <li><a href="#">!Support</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+</body>
+</html>

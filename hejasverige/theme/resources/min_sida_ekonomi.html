@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Heja Sverige - Min sida - Ekonomi</title>
+
+<link rel="stylesheet" href="style.css" />
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+<script src="js/html5.js"></script>
+<script src="js/clear_input.js"></script>
+<script src="js/tabs.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+<div class="wrapper">
+
+	<!--SIDHUVUD-->
+    <header>
+    	<img src="images/heja_sverige_logotyp.png" alt="Heja Sverige Logotyp" style="position:absolute; z-index:50;" />
+        <nav class="menu">
+        	<ul>
+            	<li><a href="index.html">Hem</a></li>
+                <li><a href="undersida.html">Om oss</a></li>
+                <li><a href="undersida.html">Medlem</a></li>
+                <li><a href="undersida.html">Förening</a>
+                	<ul class="sub-menu">
+                        <li><a href="#">Exempelsida 1</a></li>
+                        <li><a href="#">Exempelsida 2</a></li>
+                        <li><a href="#">Exempelsida 3</a></li>
+                        <li><a href="#">Exempelsida 4</a></li>
+                        <li><a href="#">Exempelsida 5</a></li>
+                        <li><a href="#">Exempelsida 6</a></li>
+            		</ul>
+                </li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="undersida.html">Support</a></li>
+            </ul>
+            <a href="#" class="menu_min_sida">Mina sidor</a>
+        </nav>
+    </header>
+    
+    <!--NAVIGATION FÖR MINA SIDOR-->
+    <section class="min_sida_head">
+    <h2 class="orange">Mina Sidor</h2>
+        <nav class="mina_sidor_nav">
+            <ul>
+                <li><a href="min_sida_start.html">Mina Sidor</a></li>
+                <li><a href="#" class="current-menu-item">Ekonomi</a></li>
+                <li><a href="#">Meddelanden (<span class="orange">%</span>)</a></li>
+                <li><a href="#">Föreningar</a></li>
+                <li><a href="#">Familjen</a></li>
+                <li><a href="#">Fakturor</a></li>
+                <li><a href="#">Inställningar</a></li>
+            </ul>
+        </nav>
+    </section>
+    
+    <!--PROFIL-->
+    <section style="width:245px;float:left;">
+    	
+        <!--PROFILBILD/NAMN-->
+        <section class="profil block" >
+            <figure style="margin-bottom:10px;">
+                <figcaption>
+                    Jonas Jonsson
+                </figcaption>
+                <img src="images/profilbild.png" alt="Profilbild" />
+            </figure>
+            
+            <!--SALDO-->
+            <section id="saldo">
+        		<h3 class="orange dashed">Saldo:</h3>
+                <ul>
+                    <li class="gra">Återbäring <span class="right">589:-</span></mark></li>
+                </ul>
+                <span class="right">Tillgodo: Värde</span>
+            </section>
+            
+           	<!--ANHÖRIGA-->
+            <section class="anhoriga">
+                <h3 class="orange">Anh&ouml;riga:</h3>
+                <figure class="anhorig">
+                    <img src="images/anhorig_profilbild.png" alt="anhorig" />
+                    <figcaption>
+                        Anna Jonsson (Relation)<br />
+                        <a href="#">QBIK</a>
+                    </figcaption>
+                </figure>
+            </section>
+        </section>
+        
+         <!--ANNONSER-->
+         <aside class="sidebar">
+             <div id="annons" class="block">
+             </div>
+        </aside>
+        
+    </section>
+
+    <!--INNEHÅLL-->
+	<section id="main" class="min-sida">
+    	<section id="innehall" class="block" style="float:left;width:670px;">
+        	<section id="saldo">
+        		<h3 class="orange dashed">Saldo:</h3>
+                <ul>
+                	<li>Utgifter <span class="right">-367:-</span></li>
+                    <li class="gra">Återbäring <span class="right">589:-</span></mark></li>
+                </ul>
+                <span class="right">Tillgodo: Värde</span>
+            </section>
+            
+            <section id="transaktioner">
+        		<h3 class="orange">Transaktioner:</h3>
+                <table width="670px;">
+                	<tr>
+                    	<td class="kalla orange">K&auml;lla</td>
+                        <td class="datum orange">Datum</td>
+                        <td class="belopp orange">Belopp</td>
+                        <td class="aterbaring orange">&Aring;terb&auml;ring</td>
+                    </tr>
+                    <tr class="gra">
+                    	<td class="kalla">Ica Maxi</td>
+                        <td class="datum">2012-10-25</td>
+                        <td class="belopp">465:-</td>
+                        <td class="aterbaring">4,65:-</td>
+                    </tr>
+                    <tr>
+                    	<td class="kalla">Ica Maxi</td>
+                        <td class="datum">2012-10-25</td>
+                        <td class="belopp">465:-</td>
+                        <td class="aterbaring">4,65:-</td>
+                    </tr>
+                    <tr class="gra">
+                    	<td class="kalla">Ica Maxi</td>
+                        <td class="datum">2012-10-25</td>
+                        <td class="belopp">465:-</td>
+                        <td class="aterbaring">4,65:-</td>
+                    </tr>
+                    <tr>
+                    	<td class="kalla">Ica Maxi</td>
+                        <td class="datum">2012-10-25</td>
+                        <td class="belopp">465:-</td>
+                        <td class="aterbaring">4,65:-</td>
+                    </tr>
+                    <tr class="gra">
+                    	<td class="kalla">Ica Maxi</td>
+                        <td class="datum">2012-10-25</td>
+                        <td class="belopp">465:-</td>
+                        <td class="aterbaring">4,65:-</td>
+                    </tr>
+                    <tr>
+                    	<td class="kalla">Ica Maxi</td>
+                        <td class="datum">2012-10-25</td>
+                        <td class="belopp">465:-</td>
+                        <td class="aterbaring">4,65:-</td>
+                    </tr>
+                    <tr class="gra">
+                    	<td class="kalla">Ica Maxi</td>
+                        <td class="datum">2012-10-25</td>
+                        <td class="belopp">465:-</td>
+                        <td class="aterbaring">4,65:-</td>
+                    </tr>
+                </table>
+                
+                <div class="pagination">
+                	<a href="#">1</a> <a href="#">2</a> <a href="#">3..</a>
+                </div>
+            </section>
+        </section>
+        
+        <section id="fakturor" class="block" style="float:left;width:670px;">
+            <h3 class="orange">Senast inkomna fakturor:</h3>
+                <table width="670px;">
+                	<tr>
+                    	<td class="avsandare orange">Avs&auml;ndare</td>
+                        <td class="belopp_f orange">Belopp</td>
+                        <td class="inkommen orange">Inkommen</td>
+                        <td class="sista_betalning orange">Sista betalningsdag</td>
+                        <td class="betala orange"></td>
+                    </tr>
+                    <tr class="gra">
+                    	<td class="avsandare">Fotboll</td>
+                        <td class="belopp_f">325:-</td>
+                        <td class="inkommen">2012-10-26</td>
+                        <td class="sista_betalning">2012-10-30</td>
+                        <td class="betala"><a href="#">Betala</a></td>
+                    </tr>
+                    <tr>
+                    	<td class="avsandare">Fotboll</td>
+                        <td class="belopp_f">325:-</td>
+                        <td class="inkommen">2012-10-26</td>
+                        <td class="sista_betalning">2012-10-30</td>
+                        <td class="betala"><a href="#">Betala</a></td>
+                    </tr>
+                    <tr class="gra">
+                    	<td class="avsandare">Fotboll</td>
+                        <td class="belopp_f">325:-</td>
+                        <td class="inkommen">2012-10-26</td>
+                        <td class="sista_betalning">2012-10-30</td>
+                        <td class="betala"><a href="#">Betala</a></td>
+                    </tr>
+                </table>
+        </section> 
+         
+	</section>
+    
+    <!--SIDFOT-->
+    <footer>
+    	<section id="logotyper">
+        	<img src="images/ica.png" alt="ICA" />
+            <img src="images/apotek.png" alt="Apoteket Hj&auml;rtat" />
+            <img src="images/elon.png" alt="ElOn" />
+            <img src="images/sats.png" alt="SATS" />
+            <img src="images/olearys.png" alt="O&acute;Learys" />
+        </section>
+        <div class="copy_foot">
+        	Copyright Heja Sverige 2012
+        </div>
+        <nav class="foot_nav">
+        	<ul>
+        		<li><a href="#" >Hem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Medlem</a></li>
+                <li><a href="#">Förening</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+</body>
+</html>

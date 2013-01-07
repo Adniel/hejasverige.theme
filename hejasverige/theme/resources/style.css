@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+/* =============================================================================
+   HTML5 Reset
+   ========================================================================== */
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display:block;}
+	audio, canvas, video {display:inline-block;*display:inline;*zoom:1;}
+	audio:not([controls]) {display:none;}
+	[hidden] {display:none;}
+	
+	html {font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+	html, button, input, select, textarea {font-family:sans-serif;color:#222;}
+	body {margin:0; font-size:14px; line-height:20px; color:#212121;}
+	p {margin:5 0 15 0;}
+	
+	h1,h2,h3,h4,h5,h6 {text-decoration:none;padding:0;color:#444;margin:0;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-weight:normal;}
+	
+	/*a {color:#FF7800; text-decoration:none;}*/
+	a { color:#ea9606; text-decoration:none;  }
+	a:focus {outline:0;}
+	a:hover, a:active {outline:0;}
+	
+	abbr[title] {border-bottom:1px dotted;}
+	b, strong {font-weight:bold;}
+	.clear {clear:both;}
+	dfn {font-style:italic;}
+	hr {display:block;height:1px;border:0;border-top:1px solid #CCC;margin:1em 0;padding:0;}
+	ins {background:#FF9;color:#000;text-decoration:none;}
+	mark {background:#FF0;color:#000;font-style:italic;font-weight:bold;}
+	pre, code, kbd, samp {font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em;}
+	pre {white-space:pre;white-space:pre-wrap;word-wrap:break-word;}
+	q {quotes:none;}
+	q:before, q:after {content:"";content:none;}
+	small {font-size:90%;}
+	blockquote {background-color:#EEE;border:1px solid #DDD;margin:10px 0;padding:10px 30px;border-radius:3px;}
+	
+	sub, sup {font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+	sup {top:-0.5em;}
+	sub {bottom:-0.25em;}
+	
+	ul {margin:0;padding:0;list-style:none;}
+	ol {margin:15px;}
+	
+	/*dd {margin:0 0 0 40px;}*/
+	dd {margin:0;}
+
+	nav ul, nav ol {list-style:none;list-style-image:none;margin:0;padding:0;}
+	
+	img {border:0;-ms-interpolation-mode:bicubic;vertical-align:middle;}
+	
+	svg:not(:root) {overflow:hidden;}
+	
+	figure {margin:0;}
+	
+	form {margin:0;}
+	fieldset {border:0;margin:0;padding:0;}
+	label {cursor:pointer;}
+	legend {border:0;*margin-left:-7px;padding:0;white-space:normal;}
+	button, input, select, textarea {font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;}
+	button, input {line-height:normal;}
+	button, input[type="button"], input[type="reset"], input[type="submit"] {cursor:pointer;-webkit-appearance:none;*overflow:visible;}
+	button[disabled], input[disabled] { cursor: default; }
+	input[type="checkbox"], input[type="radio"] {box-sizing:border-box;padding:0;*width:13px;*height:13px;}
+	input[type="search"] {-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+	input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {-webkit-appearance:none;}
+	button::-moz-focus-inner, input::-moz-focus-inner {border:0;padding:0;}
+	textarea {overflow:auto;vertical-align:top;resize:vertical;}
+	input:valid, textarea:valid {}
+	input:invalid, textarea:invalid {background-color:#F0DDDD;}
+	
+	table {border-collapse:collapse;border-spacing:0;}
+	td {vertical-align:top;}
+
+/* =============================================================================
+   General Styles
+   ========================================================================== */
+html { background:url(images/bg.png); }
+
+body { background:url(images/bg_white.png) no-repeat center -200px; }
+   
+.wrapper { width:980px; margin:0px auto; min-height:300px; padding-top:10px; }
+
+header { width:980px; height:130px; }
+
+footer { margin-top:30px; min-height:175px; float:left; }
+
+#main section { padding-bottom:20px!important; }
+
+#main .block { padding:20px; }
+
+/* MENY */
+nav ul { float:right; width:640px; }
+
+.menu { background:url(images/meny-bg.png) repeat-x; height:39px; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px; position:absolute; width:950px; margin-top:37px; margin-left:30px; text-align:right; box-shadow:0px 4px 10px #999; }
+
+.menu ul li a { display:block; float:left; padding:9px 20px; color:#4b4747; border-right:1px solid #cbcbcb; text-transform:uppercase; }
+
+.menu ul li:last-child a { border-right:none; }
+
+.menu ul li { position:relative; float:left; }
+
+.menu ul li a:hover, .menu ul li a.current-menu-item { color:#ffa200; }
+
+/* Tillägg #anon-personalbar av Grindelid */
+.menu_min_sida, #anon-personalbar { background:url(images/orange_gradient.png) repeat-x; padding:7px 15px; display:block; float:right; clear:both; margin-right:20px; margin-top:1px; color:#FFF; text-transform:uppercase; }
+
+#personaltools-login, #personaltools-join { padding:0px 10px; display:block; color:#FFF; text-transform:uppercase;}
+/* slut tillägg av Grindelid */
+
+.menu_min_sida:hover { text-decoration:underline; }
+
+.sub-menu { position:absolute; max-width:131px; margin-top:38px; padding-top:10px; display:none; background:#FFF; border-bottom:1px solid #FF7800; border-left:1px solid #FF7800; border-right:1px solid #FF7800; border-radius:0px 0px 6px 6px; z-index:100; }
+
+.menu ul li:hover .sub-menu { display:block!important; }
+
+.sub-menu a { font-size:12px; text-transform:none!important; border:none!important; padding:8px 24px!important; }
+
+.foot_nav ul { width:465px; margin-top:30px;}
+
+.foot_nav ul li a { display:block; float:left; color:#4b4747; text-transform:uppercase; padding:0px 10px; }
+
+.foot_nav ul li a:hover { text-decoration:underline; }
+
+.mina_sidor_nav ul { float:right; width:715px; }
+
+.mina_sidor_nav ul li { float:left; padding:0px 10px; border-right:1px solid #FFA200; }
+
+.mina_sidor_nav ul li:last-child { border:none; }
+
+.mina_sidor_nav ul li a { color:#4B4747; }
+
+.mina_sidor_nav ul li a:hover, .mina_sidor_nav ul li a.current-menu-item { color:#ffa200; text-decoration:underline; }
+
+/* BILDSPEL */
+#bildspel { width:948px; height:456px; padding:16px; }
+
+#bildspel_nav { height:114px; width:43px; background:url(images/bildspel_nav_bg.png) no-repeat top; position:absolute; float:left; margin-left:-59px; box-shadow:0px 4px 10px #999; -moz-box-shadow:0px 4px 10px #999; -webkit-box-shadow:0px 4px 10px #999; border-radius:7px 0px 0px 7px; -moz-border-radius:7px 0px 0px 7px; -webkit-border-radius:7px 0px 0px 7px; }
+
+.next_nav, .prev_nav { width:43px; height:57px; display:block; opacity:0.7; filter:alpha(opacity=70); }
+
+.next_nav:hover, .prev_nav:hover { opacity:1; filter:alpha(opacity=100); }
+
+.next_nav { background:url(images/next_nav.png) center 14px no-repeat; }
+
+.prev_nav { background:url(images/prev_nav.png) center 11px no-repeat; }
+
+#bildspel_cont { width:100%; height:100%; position:relative; }
+
+.bildspel_caption { position:absolute; width:565px; background:url(images/transparent_white.png); bottom:0; margin-bottom:30px; padding:20px; }
+
+.bildspel_caption h2 { font-weight:normal; margin-bottom:5px; }
+
+.bildspel_caption p { margin-top:0px; padding-top:0px; }
+
+/* Från PLONE CAROUSEL */
+.carousel {
+    position: relative;
+    margin-bottom: 1em;
+}
+.carousel-banner {
+    display: none;
+    overflow: hidden;
+    
+}
+.carousel-text {
+     position:absolute; width:565px; background:url(images/transparent_white.png); bottom:0; margin-bottom:30px; padding:20px;
+}
+.carousel-title {
+	 font-size:17px; color:#ff7800; 
+}
+.carousel-banner-1 {
+    display: block;
+
+}
+.carousel-pager {
+    margin: 0.75em 0;
+}
+.carousel-pager-item { height:114px; width:43px; background:url(images/bildspel_nav_bg.png) no-repeat top; position:absolute; float:left; margin-left:-59px; box-shadow:0px 4px 10px #999; -moz-box-shadow:0px 4px 10px #999; -webkit-box-shadow:0px 4px 10px #999; border-radius:7px 0px 0px 7px; -moz-border-radius:7px 0px 0px 7px; -webkit-border-radius:7px 0px 0px 7px; }
+
+.carousel-pager-button-next, .carousel-pager-button-prev { width:43px; height:57px; display:block; opacity:0.7; filter:alpha(opacity=70); }
+
+.carousel-pager-button-next:hover, .carousel-pager-button-prev:hover { opacity:1; filter:alpha(opacity=100); }
+
+.carousel-pager-button-next { background:url(images/next_nav.png) center 14px no-repeat; }
+
+.carousel-pager-button-prev { background:url(images/prev_nav.png) center 11px no-repeat; }
+
+.carousel-settings-introduction {
+    margin-bottom: 1em;
+}
+/* Slut från PLONE CAROUSEL */
+
+/* CONTENT */
+.block { background:#FFF; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; box-shadow:0px 4px 10px #999; -moz-box-shadow:0px 4px 10px #999; -webkit-box-shadow:0px 4px 10px #999; margin-bottom:20px; padding:10px; }
+
+aside.sidebar { display:inline-block; float:right; }
+
+section.profil { display:inline-block; float: left; width:225px;}
+
+section.min-sida { margin-left:20px; margin-right:0px!important; }
+
+section.min_sida_head { width:980px; float:left; margin-bottom:20px; }
+
+#main { width:710px; display:inline-block; margin-right:20px; }
+
+#main a:hover { text-decoration:underline; }
+
+#start_inlogg { display:inline-block; margin-right:10px; }
+
+#annons { width:225px; min-height:100px; }
+
+.tabb_grupp { float:left; }
+
+.ui-tabs { float:left; }
+
+.tab_nav { width:710px; height:40px; float:left; }
+
+.tab_nav li a { width:225px; height:15px; display:block; float:left; text-align:center; padding:12px 0px; background:#f0f0f0; border-radius:6px 6px 0px 0px; -moz-border-radius:6px 6px 0px 0px; -webkit-border-radius:6px 6px 0px 0px; margin-right:5px; border-top:1px solid #bebebe; border-left:1px solid #bebebe; border-right:1px solid #bebebe; }
+
+.tab_nav li.ui-state-active a { height:16px; background:#FFF; position:relative; z-index:50; }
+
+.ui-tabs-panel { background:#FFF; float:left; border:1px solid #bebebe; border-radius:0px 6px 6px 6px; -moz-border-radius:0px 6px 6px 6px; -webkit-border-radius:0px 6px 6px 6px; box-shadow:0px 4px 10px #999; -moz-box-shadow:0px 4px 10px #999; -webkit-box-shadow:0px 4px 10px #999; margin-bottom:20px; padding:20px 20px 30px 20px; width:670px; }
+
+.ui-tabs-panel article { width:190px; padding-right:20px; display:inline-block; margin-right:5px; }
+
+article.divider { background:url(images/divider.png) right center no-repeat; width:195px; padding-right:20px; display:block; float:left; margin-right:10px; min-height:85px; }
+
+article.divider-last { width:190px; padding-right:20px; display:inline-block; margin-right:5px; min-height:85px; }
+
+.banderoll_v { float:left; width:310px; margin-right:10px; position:relative; padding-top:45px!important; }
+
+.banderoll_h { float:left; width:310px; position:relative; padding-top:45px!important; }
+
+#event_rubrik { width:319px; height:55px; background:url(images/banderoll_v.png) no-repeat top left; position:absolute; left:-10px; top:10px; padding-top: 9px;}
+
+#nyheter_rubrik { width:319px; height:55px; text-align:right; background:url(images/banderoll_h.png) no-repeat top right; position:absolute; right:-10px; top:10px; padding-top: 9px; }
+
+#nyheter_rubrik a { font-size:20px; font-weight:normal; margin-right:35px; margin-top:9px; }
+
+#event_rubrik a { font-size:20px; font-weight:normal; margin-left:20px; margin-top:9px; }
+
+#innehall h2 { font-weight:normal; }
+
+.profil figure { max-height:200px; }
+
+.profil figure.anhorig { display:inline-block; width:225px; margin-bottom:5px; }
+
+.anhoriga figure img { display:block; width:45px; height:45px; border:1px solid #999; float:left; margin-right:5px; }
+
+.anhoriga { margin-top:10px; display:inline-block; width:225px; }
+
+.anhoriga h3 { font-weight:normal; }
+
+section.profil a:hover { text-decoration:underline; }
+
+.min_sida_head h2 { font-weight:normal; display:inline-block; } 
+
+.mina_sidor_nav { display:inline-block; float:right }
+
+figure.forenings_nyhet { margin-top:10px; float:left; padding-bottom:10px; border-bottom:1px solid #EEE; }
+
+figure.forenings_nyhet a { font-size:12px; }
+
+figure.forenings_nyhet img { display:block; float:left; width:90px; max-width:90px; height:auto;  }
+
+figure.forenings_nyhet figcaption { display:block; float:left; width:570px; margin-left:10px; }
+
+#meddelanden { text-align:right; float:right; display:block; }
+
+#meddelanden img { margin-right:5px; }
+
+section#saldo { margin-bottom:20px; }
+
+section#saldo ul { margin-top:10px; padding-bottom:10px; border-bottom:1px dashed #CCC; margin-bottom:10px; }
+
+section#saldo ul li, section#transaktioner ul li { height:25px; padding:0px 10px; }
+
+.erbjudande { width:335px; float:left; margin-bottom:10px; }
+
+.pagination { margin-top:10px; }
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* Stilar tillagda av Pål */
+
+
+.menu a.tile{ background: url("images/orange_gradient.png") repeat-x scroll 0 0 transparent; clear: both; color: #FFFFFF; display: block; float: right; margin-right: 20px; margin-top: 1px; padding: 7px 15px; text-transform: uppercase; }
+
+.documentFirstHeading { color:#ea9606; font-size:20px; margin-bottom:10px; }
+.documentDescription  { color:#757575; font-size:15px; }
+.tileHeadline  a { color:#757575; font-size:16px; margin-bottom:10px;}
+.tileFooter {border-bottom:1px dashed #CCC;}
+.image-inline { margin-left: 20px; padding: 4px;}
+.headline a { color:#757575; font-size:17px; }
+#viewlet-above-content-body { margin:22px; }
+
+
+
+/* Slut stilar tillagda av Pål */
+
+
+/* TRANSAKTIONER */
+
+.kalla { width:45%; }
+
+.datum, .belopp, .aterbaring { width:18%; }
+
+..avsandare, .belopp_f, .inkommen, .sista_betalning, .betalning { width:20%; }
+
+/* FOOTER */
+#logotyper img { display:block; padding:0px 26px; float:left; }
+
+.copy_foot { float:left; margin-top:30px; }
+
+/* TEXTSTILAR */
+/*.orange { color:#ff7800; }*/
+.orange { color:#ea9606; }
+
+.dashed { border-bottom:1px dashed #CCC; }
+
+.right { float:right; }
+
+.gra { background:#EEE; }
+
+img.alignright { padding:4px; display:inline; float:right; margin-left:20px; }
+
+/* GENERELL CSS */
+input:focus { outline:none; }
+
+input { padding-left:3px; background:url(images/input_bg.png) no-repeat center top; width:165px; height:32px; border:1px solid #999; margin: 2px; }
+
+.submit { background:url(images/orange_gradient.png) repeat-x center; color:#FFF; padding:5px 15px; border:0px; border-radius:6px; width:93px; }

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Heja Sverige - Min sida</title>
+
+<link rel="stylesheet" href="style.css" />
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+<script src="js/html5.js"></script>
+<script src="js/clear_input.js"></script>
+<script src="js/tabs.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+<div class="wrapper">
+
+	<!--SIDHUVUD-->
+    <header>
+    	<img src="images/heja_sverige_logotyp.png" alt="Heja Sverige Logotyp" style="position:absolute; z-index:50;" />
+        <nav class="menu">
+        	<ul>
+            	<li><a href="index.html">!Hem</a></li>
+                <li><a href="undersida.html">!Om oss</a></li>
+                <li><a href="undersida.html">!Medlem</a></li>
+                <li><a href="undersida.html">!Förening</a>
+                	<ul class="sub-menu">
+                        <li><a href="#">Exempelsida 1</a></li>
+                        <li><a href="#">Exempelsida 2</a></li>
+                        <li><a href="#">Exempelsida 3</a></li>
+                        <li><a href="#">Exempelsida 4</a></li>
+                        <li><a href="#">Exempelsida 5</a></li>
+                        <li><a href="#">Exempelsida 6</a></li>
+            		</ul>
+                </li>
+                <li><a href="#">!Kontakt</a></li>
+                <li><a href="undersida.html">!Support</a></li>
+            </ul>
+            <a href="#" class="menu_min_sida">!Mina sidor</a>
+        </nav>
+    </header>
+    
+    <!--NAVIGATION FÖR MINA SIDOR-->
+    <section class="min_sida_head">
+    <h2 class="orange">!Mina Sidor</h2>
+        <nav class="mina_sidor_nav">
+            <ul>
+                <li><a href="#" class="current-menu-item">!Mina Sidor</a></li>
+                <li><a href="min_sida_ekonomi.html">!Ekonomi</a></li>
+                <li><a href="#">!Meddelanden (<span class="orange">%</span>)</a></li>
+                <li><a href="#">!Föreningar</a></li>
+                <li><a href="#">!Familjen</a></li>
+                <li><a href="#">!Fakturor</a></li>
+                <li><a href="#">!Inställningar</a></li>
+            </ul>
+        </nav>
+    </section>
+    
+    <!--PROFIL-->
+    <section style="width:245px;float:left;">
+    	
+        <!--PROFILBILD/NAMN-->
+        <section id="profil" class="profil block" >
+            <figure style="margin-bottom:10px;">
+                <figcaption>
+                    !Jonas Jonsson
+                </figcaption>
+                <img src="images/profilbild.png" alt="Profilbild" />
+            </figure>
+            
+            <!--SALDO-->
+            <section id="saldo">
+        		<h3 class="orange dashed">!Saldo:</h3>
+                <ul>
+                    <li class="gra">!Återbäring <span class="right">589:-</span></mark></li>
+                </ul>
+                <span class="right">!Tillgodo: Värde</span>
+            </section>
+            
+           	<!--ANHÖRIGA-->
+            <section class="anhoriga">
+                <h3 class="orange">!Anh&ouml;riga:</h3>
+                <figure class="anhorig">
+                    <img src="images/anhorig_profilbild.png" alt="anhorig" />
+                    <figcaption>
+                        !Anna Jonsson (Relation)<br />
+                        <a href="#">!QBIK</a>
+                    </figcaption>
+                </figure>
+            </section>
+        </section>
+        
+         <!--ANNONSER-->
+         <aside class="sidebar">
+             <div id="annons" class="block">
+             </div>
+        </aside>
+        
+    </section>
+
+    <!--INNEHÅLL-->
+	<section id="main" class="min-sida">
+    	<section id="innehall" class="block" style="float:left;width:670px;">
+        	<hgroup style="width:500px;float:left;">
+                <h2 class="orange">!Välkommen Namn Efternamn!</h2>
+                <h4>!Tillgodo: <span class="orange">!Värde</span></h4>
+            </hgroup>
+            
+            <div id="meddelanden">
+            <img src="images/mail.png" alt="mail icon" /><a href="#" class="orange">!Meddelanden(%)</a>
+            </div>
+            
+            <!--FÖRENINGS NYHET-->
+            <figure class="forenings_nyhet">
+                 <img src="images/forenings_bild.png" />
+                <figcaption>
+                <h3 class="orange">!Match mot Växjö - 2012-10-11</h3>
+                    Phasellus sit amet nulla augue. Vivamus tincidunt tincidunt faucibus. Morbi lobortis aliquet metus...<br />
+                    <a href="#">Läs mer på föreningens sida...</a>
+                </figcaption>
+            </figure>
+            
+            <figure class="forenings_nyhet">
+                 <img src="images/forenings_bild.png" />
+                <figcaption>
+                <h3 class="orange">!Match mot Växjö - 2012-10-11</h3>
+                    Phasellus sit amet nulla augue. Vivamus tincidunt tincidunt faucibus. Morbi lobortis aliquet metus...<br />
+                    <a href="#">Läs mer på föreningens sida...</a>
+                </figcaption>
+            </figure>
+            
+            <figure class="forenings_nyhet">
+                 <img src="images/forenings_bild.png" />
+                <figcaption>
+                <h3 class="orange">!Match mot Växjö - 2012-10-11</h3>
+                    Phasellus sit amet nulla augue. Vivamus tincidunt tincidunt faucibus. Morbi lobortis aliquet metus...<br />
+                    <a href="#">Läs mer på föreningens sida...</a>
+                </figcaption>
+            </figure>
+            
+        </section>
+        
+        <!--TABBGRUPP 1-->
+        <section id="hur_forening_medlem" class="tabb_grupp">
+            <div class="tabb_container">
+            	<ul class="tab_nav">
+                	<li><a href="#tabs-1">!Erbjudanden</a></li>
+                    <li><a href="#tabs-2">!Kuponger</a></li>
+                    <li><a href="#tabs-3">!K&ouml;p Varor</a></li>
+                </ul>
+                
+                <div id="tabs-1">
+                    <div class="erbjudande">
+                    	!Stadium<br/>
+                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
+                    </div>
+                    <div class="erbjudande">
+                    	!Stadium<br/>
+                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
+                    </div>
+                    <div class="erbjudande">
+                    	!Stadium<br/>
+                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
+                    </div>
+                    <div class="erbjudande">
+                    	!Stadium<br/>
+                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
+                    </div>
+                    <div class="erbjudande">
+                    	!Stadium<br/>
+                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
+                    </div>
+                </div>
+                
+                <div id="tabs-2">
+                	<!--INNEHÅLL-->
+                </div>
+                
+                <div id="tabs-3">
+                	<!--INNEHÅLL-->
+                </div>
+            </div>
+        </section> 
+         
+	</section>
+    
+    <!--SIDFOT-->
+    <footer>
+    	<section id="logotyper">
+        	<img src="images/ica.png" alt="ICA" />
+            <img src="images/apotek.png" alt="Apoteket Hj&auml;rtat" />
+            <img src="images/elon.png" alt="ElOn" />
+            <img src="images/sats.png" alt="SATS" />
+            <img src="images/olearys.png" alt="O&acute;Learys" />
+        </section>
+        <div class="copy_foot">
+        	!Copyright Heja Sverige 2012
+        </div>
+        <nav class="foot_nav">
+        	<ul>
+        		<li><a href="#" >!Hem</a></li>
+                <li><a href="#">!Om oss</a></li>
+                <li><a href="#">!Medlem</a></li>
+                <li><a href="#">!Förening</a></li>
+                <li><a href="#">!Kontakt</a></li>
+                <li><a href="#">!Support</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+</body>
+</html>
