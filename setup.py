@@ -20,7 +20,7 @@ setup(name='hejasverige.theme',
       url='http://www.swedwise.se/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['heja'],
+      namespace_packages=['hejasverige'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
