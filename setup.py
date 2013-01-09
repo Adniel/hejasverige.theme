@@ -26,7 +26,6 @@ setup(name='hejasverige.theme',
       install_requires=[
           'setuptools',
           'plone.app.theming',
-          'Plone',
           # -*- Extra requirements: -*-
       ],
       extras_require={
