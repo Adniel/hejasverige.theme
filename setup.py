@@ -13,7 +13,7 @@ setup(name='hejasverige.theme',
       classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
-        ],
+      ],
       keywords='',
       author='Paal Karlsson',
       author_email='pal.karlsson@swedwise.se',
@@ -26,6 +26,7 @@ setup(name='hejasverige.theme',
       install_requires=[
           'setuptools',
           'plone.app.theming',
+          'Plone',
           # -*- Extra requirements: -*-
       ],
       extras_require={
