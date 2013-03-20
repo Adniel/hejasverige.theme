@@ -7,8 +7,8 @@
 
 	<rules css:if-content="#visual-portal-wrapper">
 
-		<theme href="valkommen-till-heja-sverige.html" css:if-content="body.section-front-page" />
-		<!--theme href="om-heja-sverige.html" css:if-content="body.section-om-heja-sverige" />
+		<!--theme href="valkommen-till-heja-sverige.html" css:if-content="body.section-front-page" />
+		<theme href="om-heja-sverige.html" css:if-content="body.section-om-heja-sverige" />
 		<theme href="forening.html" css:if-content="body.section-forening" />
 		<theme href="medlem.html" css:if-content="body.section-medlem"/>
 		<theme href="kontakt.html" css:if-content="body.section-kontakt"/>
