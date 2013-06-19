@@ -7,15 +7,46 @@
 
 	<rules css:if-content="#visual-portal-wrapper">
 
-		<!--theme href="valkommen-till-heja-sverige.html" css:if-content="body.section-front-page" />
-		<theme href="om-heja-sverige.html" css:if-content="body.section-om-heja-sverige" />
+		<theme href="cover.html" css:if-content="body.section-heja-sverige" />
+		<theme href="min_sida_start.html" css:if-content="div#portal-menubar-wrapper" />
+		<!--theme href="om-heja-sverige.html" css:if-content="body.section-om-heja-sverige" />
 		<theme href="forening.html" css:if-content="body.section-forening" />
 		<theme href="medlem.html" css:if-content="body.section-medlem"/>
 		<theme href="kontakt.html" css:if-content="body.section-kontakt"/>
 		<theme href="support.html" css:if-content="body.section-support"/>
-		<theme href="min_sida_start.html" css:if-content="body.section-mina-sidor"/>
 		<theme href="min_sida_start.html" css:if-content="body.section-logged_out"/-->
 		<theme href="index.html" />
+        
+		<!-- GENERAL -->
+        <notheme css:if-content="body.template-manage-portlets" />
+        <!-- prevent theming usergroup-userprefs view -->
+        <notheme css:if-content="body.template-usergroup-userprefs" />		
+
+      	<!-- prevent theming if $ajax_load is true -->
+      	<notheme if="$ajax_load" />
+
+      	<notheme if="contains($path, '##notheme##')"/>
+
+        <copy
+          attributes="id dir"
+          css:content="body"
+          css:theme="body"
+        />
+
+        <!-- merge css classes from Plone into Theme -->
+        <merge
+          attributes="class"
+          css:content="body"
+          css:theme="body"
+        />
+
+      <!-- copy Plone logo href into Theme -->
+        <copy
+          attributes="href"
+          css:content='#portal-logo'
+          css:theme="#portal-logo"
+        />        
+		<!-- GENERAL -->
 
 
 		<!-- Head elements -->
@@ -23,49 +54,90 @@
 		<after css:theme-children="html head" css:content="html head base" />
 		<after css:theme-children="html head" css:content="html head script" />
 
+		<!-- edit bar -->
+		<append css:theme="nav.mina_sidor" css:content="div.editbar" />
 
 		<!-- Main navigation -->
 		<replace css:content="ul#portal-globalnav" theme="/html/body/div/header/nav/ul" />
+
+		 <!-- Main Content -->
+		<replace css:if-not-content="body.section-heja-sverige" css:theme="section#innehall > article" css:content="div#content" />
 		
-		<!-- Main Content -->
-		<replace css:theme="section#innehall article" css:content="div#content" />
 
 		<!-- portlet NavigationTree (MINA SIDOR) -->
 		<!--replace css:if-content="" css:content="div#portal-column-two.cell dl.portletNavigationTree dt.portletHeader a.tile" css:theme="a.menu_min_sida" /-->
-		<replace css:if-content="dl#portal-personaltools" css:content="dl#portal-personaltools" css:theme="a.menu_min_sida" />
+		<copy attributes="href" css:if-content="li#personaltools-logout" css:content="li#personaltools-logout > a" css:theme="a.menu_min_sida" />
+		<append css:if-content="li#personaltools-logout" css:theme="#mina_sidor_nav">
+			<ul id="portal-personaltools" class="actionMenu deactivated min_sida">
+				<li id="anon-personalbar">
+					<a id="menu_min_sida" class="mina_sidor" href="../@@my-megabank-account">Mina sidor</a>
+				</li>
+			</ul>
+		</append>
+		<copy attributes="href" css:if-content="li#personaltools-logout" css:content="#portal-menubar > li:nth-child(1) > a:nth-child(1)" css:theme="a.mina_sidor" />
+
+		<!--copy css:if-content="li#personaltools-logout" css:content="li#personaltools-logout > a" css:theme="a.menu_min_sida" /-->
 
 		<!-- if not content: replace with link to loginpage -->
 		<merge attributes="class" css:content="a#personaltools-login" css:theme="a.menu_min_sida" />
 		<replace css:if-content="a#personaltools-login" css:content="ul#portal-personaltools" css:theme="a.menu_min_sida"/>
 
+		<!-- Portlet column 2 -->
+		<replace theme="/html/body/div/aside/div" css:content="div.portletWrapper" />
 
 		<!-- Footer -->
+		<drop css:theme="#logotyper" />
 		<replace  theme="/html/body/div/footer/nav/ul" css:content="ul#portal-globalnav" />
 
 
 		<!-- Content specific rules -->
-		<!-- HEM -->				
-	    <rules css:if-content="body.section-valkommen-till-heja-sverige">
-	    	
+		<!-- HEM -->
+
+	    <rules css:if-content="body.section-heja-sverige">
+
+			<replace css:theme="section#innehall" css:content="div#content" />
 	    	<!-- Login -->
-		    <drop css:content="dl.portletLogin dt.portletHeader" />
+		    <!--drop css:content="dl.portletLogin dt.portletHeader" />
 	    	<strip css:content="form#loginform div.field" />
 	    	<replace css:if-content="" css:theme="form#start_inlogg" css:content="dl.portletLogin" />
-		    <drop css:if-not-content="dl.portletLogin" css:theme="form#start_inlogg" />
+		    <drop css:if-not-content="dl.portletLogin" css:theme="form#start_inlogg" /-->
 
 			<!-- Carousel -->
 			<replace css:theme="figure#bildspel_cont" css:content="div#carousel-front-page" />
-			<drop css:content="div.carousel-pager" />
+			<drop css:theme="bildspel_nav" />
 
 			<!-- Event -->
+			<replace content="//div[@class='row' and position()=2]/div[contains(@class,'cell') and position()=1]/div[position()=1]/div[@class='tile']/@class">
+    			<xsl:attribute name="class"><xsl:value-of select="."/> event_rubrik</xsl:attribute>
+			</replace>						
+
+			<append content="//div[@class='row' and position()=2]/div[contains(@class,'cell') and position()=1]/div[position()=1]">
+    			<xsl:attribute name="class">banderoll_v</xsl:attribute>
+			</append>						
+
+			<replace content="//div[@class='row' and position()=2]/div[contains(@class,'cell') and position()=2]/div[position()=1]/div[@class='tile']/@class">
+    			<xsl:attribute name="class"><xsl:value-of select="."/> nyheter_rubrik</xsl:attribute>
+			</replace>
+
+			<replace content="//div[@class='row' and position()=2]/div[contains(@class,'cell') and position()=2]/@class">
+    			<xsl:attribute name="class"><xsl:value-of select="."/> news_tile</xsl:attribute>
+			</replace>						
+
+			<!--replace css:theme="div#event_rubrik h2.orange" css:content="div.row:nth-child(2) > div.cell:nth-child(1) > div:nth-child(1) > div.tile > div:nth-child(1) > h2" />
+			<replace theme="//section[@id='event']/article" css:content="div.row:nth-child(2) > div.cell:nth-child(1) > div:nth-child(2) > div.tile > div " /-->
+
+			<!--replace theme="//section[@id='event']/article/p" content="//div[@class='row'][position()=2]/div[contains(@class,'cell')][position()=1]" />
+			<replace theme="//section[@id='event']/article/p" css:content="div.position-0 widht-8" />
 			<replace theme="//section[@id='event']/article/p" css:content-children="dl.portletEvents dd.portletItem" />
-			<replace css:theme="div#event_rubrik h2.orange" css:content="dl.portletEvents dt.portletHeader a" />
-			<replace css:if-content="" theme="//section[@id='event']/article/aside/a" css:content="dl.portletEvents dd.portletFooter a" />
+			<replace css:if-content="" theme="//section[@id='event']/article/aside/a" css:content="dl.portletEvents dd.portletFooter a" /-->
 
 			<!-- News -->
-			<replace theme="//section[@id='nyheter']/article/p" css:content-children="dl.portletNews dd.portletItem" />
+			<!-- replace css:theme="div#nyheter_rubrik > h2.orange" css:content="div.row:nth-child(2) > div.cell:nth-child(2) > div:nth-child(1) > div.tile > div:nth-child(1) > h2" />
+			<replace theme="//section[@id='nyheter']/article" css:content="div.row:nth-child(2) > div.cell:nth-child(2) > div:nth-child(2) > div.tile > div " />	
+			<replace theme="//section[@id='nyheter']/article/aside/a" css:content="dl.portletNews dd.portletFooter a" /-->				
+			<!--replace theme="//section[@id='nyheter']/article/p" css:content-children="dl.portletNews dd.portletItem" />
 			<replace css:theme="div#nyheter_rubrik h2.orange" css:content="dl.portletNews dt.portletHeader a" />
-			<replace theme="//section[@id='nyheter']/article/aside/a" css:content="dl.portletNews dd.portletFooter a" />				
+			<replace theme="//section[@id='nyheter']/article/aside/a" css:content="dl.portletNews dd.portletFooter a" /-->				
 
 	    </rules>
 
@@ -94,13 +166,17 @@
 		</rules>	
 		
 		<!-- MINA SIDOR mina-sidor  -->
-	    <rules css:if-content="body.section-mina-sidor">
+	    <rules css:if-content="div#portal-menubar-wrapper">
 
 	    	<!-- profile portlet -->
-			<replace css:theme-children="section#profil" css:content="div#portal-column-one" />				
+			<!--replace theme="/html/body/div/div/aside/div" css:content="div.portletWrapper" /-->
+			<replace css:theme="aside.sidebar > div" css:content="div.portletWrapper" />
+			<append css:theme="nav.mina_sidor_nav" css:content="div#portal-menubar-wrapper" />
+			<drop css:theme=".tabb_grupp" />
+			<!--replace css:theme="aside.sidebar" css:content="div.portletWrapper" /-->				
 				
 		</rules>
-        
+
         <!--replace css:theme="#langue li:first-child" css:if-content="#portal-languageselector .language-en.currentLanguage">
             <li><a rel="alternate" hreflang="fr"><xsl:apply-templates select="//*[@id='portal-languageselector']//li//a/@*[name()='href' or name()='title']"/>français</a></li>
         </replace-->

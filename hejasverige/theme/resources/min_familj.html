@@ -4,8 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Heja Sverige - Min sida</title>
 
-<link rel="stylesheet" href="table.css" />
-<link rel="stylesheet" href="columns.css" />
 <link rel="stylesheet" href="style.css" />
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -24,7 +22,7 @@
 
 	<!--SIDHUVUD-->
     <header>
-    	<a id="portal-logo" href="#"><img src="images/heja_sverige_logotyp.png" alt="Heja Sverige Logotyp" style="position:absolute; z-index:50;" /></a>
+    	<img src="images/heja_sverige_logotyp.png" alt="Heja Sverige Logotyp" style="position:absolute; z-index:50;" />
         <nav class="menu">
         	<ul>
             	<li><a href="index.html">!Hem</a></li>
@@ -44,16 +42,16 @@
                 <li><a href="undersida.html">!Support</a></li>
             </ul>
             <div id="mina_sidor_nav">
-                <a href="min_sida_start.html" class="menu_min_sida">Logga ut</a>
+                <a href="min_sida_start.html" class="menu_min_sida">!Mina sidor</a>
             </div>
         </nav>
     </header>
     
     <!--NAVIGATION FÖR MINA SIDOR-->
     <section class="min_sida_head">
-    <h2 class="orange">Mina Sidor</h2>
+    <h2 class="orange">!Mina Sidor</h2>
         <nav class="mina_sidor_nav">
-            <!--ul>
+            <ul>
                 <li><a href="#" class="current-menu-item">!Mina Sidor</a></li>
                 <li><a href="min_sida_ekonomi.html">!Ekonomi</a></li>
                 <li><a href="#">!Meddelanden (<span class="orange">%</span>)</a></li>
@@ -61,14 +59,15 @@
                 <li><a href="#">!Familjen</a></li>
                 <li><a href="#">!Fakturor</a></li>
                 <li><a href="#">!Inställningar</a></li>
-            </ul-->
+            </ul>
         </nav>
     </section>
     
     <!--PROFIL-->
-    <div style="width:245px;float:left;">
+    <section style="width:245px;float:left;">
     	
-        <!--section id="profil" class="profil block" >
+        <!--PROFILBILD/NAMN-->
+        <section id="profil" class="profil block" >
             <figure style="margin-bottom:10px;">
                 <figcaption>
                     !Jonas Jonsson
@@ -76,6 +75,7 @@
                 <img src="images/profilbild.png" alt="Profilbild" />
             </figure>
             
+            <!--SALDO-->
             <section id="saldo">
         		<h3 class="orange dashed">!Saldo:</h3>
                 <ul>
@@ -84,6 +84,7 @@
                 <span class="right">!Tillgodo: Värde</span>
             </section>
             
+           	<!--ANHÖRIGA-->
             <section class="anhoriga">
                 <h3 class="orange">!Anh&ouml;riga:</h3>
                 <figure class="anhorig">
@@ -94,7 +95,7 @@
                     </figcaption>
                 </figure>
             </section>
-        </section-->
+        </section>
         
          <!--ANNONSER-->
          <aside class="sidebar">
@@ -102,66 +103,34 @@
              </div>
         </aside>
         
-    </div>
+    </section>
 
     <!--INNEHÅLL-->
 	<section id="main" class="min-sida">
-    	<section id="innehall" class="block" style="float:left;width:670px;">
-            <article></article>            
-            <!--figure class="forenings_nyhet">
-                 <img src="images/forenings_bild.png" />
+    	<section id="innehall" class="block" style="float:left;width:670px;">            
+            <!--FAMILJ-->
+            <figure class="familj">
+                 <img src="images/profilbild.png" />
                 <figcaption>
-                <h3 class="orange">!Match mot Växjö - 2012-10-11</h3>
-                    Phasellus sit amet nulla augue. Vivamus tincidunt tincidunt faucibus. Morbi lobortis aliquet metus...<br />
-                    <a href="#">Läs mer på föreningens sida...</a>
+                <h3 class="orange">Hampus Norrman (040518-0495)</h3>
+                    <h4>Föreningar</h4>
+                    <dd>Färjestad BK</li>
+                    <a href="#">Visa</a> | 
+                    <a href="#">Ändra</a> | 
+                    <a href="#">Ta bort</a>
                 </figcaption>
-            </figure-->
+            </figure>
             
+            <figure class="familj">
+                 <img src="images/profilbild.png" />
+                <figcaption>
+                <h3 class="orange">Sigrid Norrman (071206-1992)</h3>
+                    Phasellus sit amet nulla augue. Vivamus tincidunt tincidunt faucibus. Morbi lobortis aliquet metus...<br />
+                    <a href="#"></a>
+                </figcaption>
+            </figure>            
         </section>
         
-        <!--TABBGRUPP 1-->
-        <section id="hur_forening_medlem" class="tabb_grupp">
-            <div class="tabb_container">
-            	<ul class="tab_nav">
-                	<li><a href="#tabs-1">!Erbjudanden</a></li>
-                    <li><a href="#tabs-2">!Kuponger</a></li>
-                    <li><a href="#tabs-3">!K&ouml;p Varor</a></li>
-                </ul>
-                
-                <div id="tabs-1">
-                    <div class="erbjudande">
-                    	!Stadium<br/>
-                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
-                    </div>
-                    <div class="erbjudande">
-                    	!Stadium<br/>
-                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
-                    </div>
-                    <div class="erbjudande">
-                    	!Stadium<br/>
-                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
-                    </div>
-                    <div class="erbjudande">
-                    	!Stadium<br/>
-                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
-                    </div>
-                    <div class="erbjudande">
-                    	!Stadium<br/>
-                        <a href="#">!Köp 3 vattenflaskor, betala för 2</a>
-                    </div>
-                </div>
-                
-                <div id="tabs-2">
-                	<!--INNEHÅLL-->
-                </div>
-                
-                <div id="tabs-3">
-                	<!--INNEHÅLL-->
-                </div>
-            </div>
-        </section> 
-         
-	</section>
     
     <!--SIDFOT-->
     <footer>
@@ -173,7 +142,7 @@
             <img src="images/olearys.png" alt="O&acute;Learys" />
         </section>
         <div class="copy_foot">
-        	&copy; Copyright Heja Sverige 2013
+        	!Copyright Heja Sverige 2012
         </div>
         <nav class="foot_nav">
         	<ul>
