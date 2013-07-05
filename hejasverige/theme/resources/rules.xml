@@ -21,7 +21,9 @@
         <notheme css:if-content="body.template-manage-portlets" />
         <!-- prevent theming usergroup-userprefs view -->
         <notheme css:if-content="body.template-usergroup-userprefs" />		
-
+		<notheme css:if-content="body.template-usergroup-groupprefs" />
+		<!--notheme css:if-content="body.template-u@@user-information" /-->
+		
       	<!-- prevent theming if $ajax_load is true -->
       	<notheme if="$ajax_load" />
 
