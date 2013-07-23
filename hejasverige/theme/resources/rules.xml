@@ -91,6 +91,8 @@
 		<drop css:theme="#logotyper" />
 		<replace  theme="/html/body/div/footer/nav/ul" css:content="ul#portal-globalnav" />
 
+		<!-- Remove author by line -->
+		<drop css:content=".documentByLine" />
 
 		<!-- Content specific rules -->
 		<!-- HEM -->
@@ -106,7 +108,7 @@
 
 			<!-- Carousel -->
 			<replace css:theme="figure#bildspel_cont" css:content="div#carousel-front-page" />
-			<drop css:theme="bildspel_nav" />
+			<drop css:theme=".bildspel_nav" />
 
 			<!-- Event -->
 			<replace content="//div[@class='row' and position()=2]/div[contains(@class,'cell') and position()=1]/div[position()=1]/div[@class='tile']/@class">
