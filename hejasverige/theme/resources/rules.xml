@@ -62,6 +62,14 @@
 		<!-- Main navigation -->
 		<replace css:content="ul#portal-globalnav" theme="/html/body/div/header/nav/ul" />
 
+		<!-- Portal message -->
+		<!-- CSS: portalMessage info -->
+		<drop css:content="#content .portalMessage"/>
+
+		<before css:content=".portalMessage"
+		        css:theme="#innehall"
+		        method="raw" />
+
 		 <!-- Main Content -->
 		<replace css:if-not-content="body.section-heja-sverige" css:theme="section#innehall > article" css:content="div#content" />
 		
@@ -72,7 +80,7 @@
 		<append css:if-content="li#personaltools-logout" css:theme="#mina_sidor_nav">
 			<ul id="portal-personaltools" class="actionMenu deactivated min_sida">
 				<li id="anon-personalbar">
-					<a id="menu_min_sida" class="mina_sidor" href="../@@my-megabank-account">Mina sidor</a>
+					<a id="menu_min_sida" class="mina_sidor" href="{$scheme}://{$host}{$path}@@my-megabank-account">Mina sidor</a>
 				</li>
 			</ul>
 		</append>

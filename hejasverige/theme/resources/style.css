@@ -70,7 +70,7 @@
 	input:invalid, textarea:invalid {background-color:#F0DDDD;}
 	
 	table {border-collapse:collapse;border-spacing:0;}
-	td {vertical-align:top;}
+	td {vertical-align:middle;}
 
 /* Cover */
 div.cell { background:#FFF; 
@@ -476,3 +476,7 @@ input { padding-left:3px; background:url(images/input_bg.png) no-repeat center t
 #menu_min_sida {margin-top:-9px;color:#fff;}
 ul.min_sida {margin-right:-20px;}
 div.news_tile {margin-left:-350px;}
+
+/* Portal message */
+.portalMessage .info {}
+.portalMessage .error {color: red;}
