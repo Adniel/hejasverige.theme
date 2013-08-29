@@ -214,11 +214,11 @@ nav ul { float:right; width:640px; }
 
 .menu ul li a:hover, .menu ul li a.current-menu-item { color:#ffa200; }
 
-/* Till‰gg #anon-personalbar av Grindelid */
+/* Till√§gg #anon-personalbar av Grindelid */
 .button, .menu_min_sida, #anon-personalbar { background:url(images/orange_gradient.png) repeat-x; padding:7px 15px; display:block; float:right; clear:both; margin-right:20px; margin-top:1px; color:#FFF; text-transform:uppercase; }
 
 #personaltools-login, #personaltools-join { padding:0px 10px; display:block; color:#FFF; text-transform:uppercase;}
-/* slut till‰gg av Grindelid */
+/* slut till√§gg av Grindelid */
 
 .menu_min_sida:hover { text-decoration:underline; }
 
@@ -265,7 +265,7 @@ nav ul { float:right; width:640px; }
 
 .bildspel_caption p { margin-top:0px; padding-top:0px; }
 
-/* FrÂn PLONE CAROUSEL */
+/* Fr√•n PLONE CAROUSEL */
 .carousel {
     position: relative;
     margin-bottom: 1em;
@@ -306,7 +306,7 @@ nav ul { float:right; width:640px; }
 .carousel-settings-introduction {
     margin-bottom: 1em;
 }
-/* Slut frÂn PLONE CAROUSEL */
+/* Slut fr√•n PLONE CAROUSEL */
 
 /* CONTENT */
 .block { background:#FFF; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; box-shadow:0px 4px 10px #999; -moz-box-shadow:0px 4px 10px #999; -webkit-box-shadow:0px 4px 10px #999; margin-bottom:20px; padding:10px; }
@@ -417,7 +417,7 @@ section#saldo ul li, section#transaktioner ul li { height:25px; padding:0px 10px
 
 
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
-/* Stilar tillagda av PÂl */
+/* Stilar tillagda av P√•l */
 
 
 .menu a.tile{ background: url("images/orange_gradient.png") repeat-x scroll 0 0 transparent; clear: both; color: #FFFFFF; display: block; float: right; margin-right: 20px; margin-top: 1px; padding: 7px 15px; text-transform: uppercase; }
@@ -432,7 +432,7 @@ section#saldo ul li, section#transaktioner ul li { height:25px; padding:0px 10px
 
 
 
-/* Slut stilar tillagda av PÂl */
+/* Slut stilar tillagda av P√•l */
 
 
 /* TRANSAKTIONER */
@@ -468,7 +468,7 @@ input { padding-left:3px; background:url(images/input_bg.png) no-repeat center t
 
 .submit { background:url(images/orange_gradient.png) repeat-x center; color:#FFF; padding:5px 15px; border:0px; border-radius:6px; width:93px; }
 
-/* ÷vriga r‰ttninigar */
+/* √ñvriga r√§ttninigar */
 .hiddenStructure {display:none;}
 .cover-collection-tile {margin-top:55px;}
 .collection-item p.description {margin-top:4px;}
@@ -478,5 +478,30 @@ ul.min_sida {margin-right:-20px;}
 div.news_tile {margin-left:-350px;}
 
 /* Portal message */
-.portalMessage .info {}
+.portalMessage {
+background:#FFF; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; box-shadow:0px 4px 10px #999; -moz-box-shadow:0px 4px 10px #999; -webkit-box-shadow:0px 4px 10px #999; margin-bottom:20px; padding:10px; 
+}
+
+.portalMessage .info { }
+
 .portalMessage .error {color: red;}
+
+
+/* form */
+div.field.error {
+	background-color: #fdc;
+	border: 1px solid #ea9606;
+	padding: 0.5em;
+	margin: 1em 0;
+	border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+}
+
+dl.portalMessage, div.attention, div.caution, div.danger, div.error, div.hint, div.important, div.note, div.tip, div.warning {
+	font-size: 80%;
+}
+
+span.required:after {
+content: "‚ñ†";
+color: #ea9606;
+padding-left: 0.2em;
+}

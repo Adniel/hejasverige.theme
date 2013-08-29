@@ -77,14 +77,21 @@
 		<!-- portlet NavigationTree (MINA SIDOR) -->
 		<!--replace css:if-content="" css:content="div#portal-column-two.cell dl.portletNavigationTree dt.portletHeader a.tile" css:theme="a.menu_min_sida" /-->
 		<copy attributes="href" css:if-content="li#personaltools-logout" css:content="li#personaltools-logout > a" css:theme="a.menu_min_sida" />
-		<append css:if-content="li#personaltools-logout" css:theme="#mina_sidor_nav">
+		<append css:if-content="li#personaltools-economy" css:theme="#mina_sidor_nav">
 			<ul id="portal-personaltools" class="actionMenu deactivated min_sida">
 				<li id="anon-personalbar">
-					<a id="menu_min_sida" class="mina_sidor" href="{$scheme}://{$host}{$path}@@my-megabank-account">Mina sidor</a>
+				  <xsl:element name="a">
+				    <xsl:attribute name="id">menu_min_sida</xsl:attribute>
+				    <xsl:attribute name="class">mina_sidor</xsl:attribute>
+				    <xsl:attribute name="href"><xsl:value-of select="//*[@id='personaltools-economy']/a/@href" /></xsl:attribute>
+				    Mina sidor
+				  </xsl:element>					
+					<!--a id="menu_min_sida" class="mina_sidor" href="">Mina sidor</a-->
 				</li>
 			</ul>
 		</append>
-		<copy attributes="href" css:if-content="li#personaltools-logout" css:content="#portal-menubar > li:nth-child(1) > a:nth-child(1)" css:theme="a.mina_sidor" />
+		<!--copy attributes="href" css:if-content="li#personaltools-logout" content="//*[@id='personaltools-logout']/a" css:theme="a.mina_sidor" /-->
+		<!--copy attributes="href" css:if-content="li#personaltools-logout" css:content="#portal-menubar > li:nth-child(1) > a:nth-child(1)" css:theme="a.mina_sidor" /-->
 
 		<!--copy css:if-content="li#personaltools-logout" css:content="li#personaltools-logout > a" css:theme="a.menu_min_sida" /-->
 
