@@ -11,10 +11,14 @@
 	
 	html {font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
 	html, button, input, select, textarea {font-family:sans-serif;color:#222;}
+/*	body {margin:0; font-size:14px; line-height:20px; color:#212121;}
+	p {margin:5 0 15 0;}	
+	h1,h2,h3,h4,h5,h6 {text-decoration:none;padding:0;color:#444;margin:0;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-weight:normal;}
+*/
 	body {margin:0; font-size:14px; line-height:20px; color:#212121; font-family:"PT Sans", Arial, sans-serif; font-weight: 400;}
 	p {margin:5 0 15 0;}
-	h1,h2,h3,h4,h5,h6 {text-decoration:none;padding:0;color:#444;margin:0;font-family:"Montserrat", Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 400;}
-	
+	h1,h2,h3,h4,h5,h6 {text-decoration:none;padding:0;color:#444;margin:0;font-family:"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 400;}
+
 	/*a {color:#FF7800; text-decoration:none;}*/
 	a { color:#ea9606; text-decoration:none;  }
 	a:focus {outline:0;}
@@ -310,7 +314,7 @@ nav ul { float:right; width:640px; }
 /* CONTENT */
 .block { background:#FFF; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; box-shadow:0px 4px 10px #999; -moz-box-shadow:0px 4px 10px #999; -webkit-box-shadow:0px 4px 10px #999; margin-bottom:20px; padding:10px; }
 
-.portletWrapper { background:#FFF; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; box-shadow:0px 4px 10px #999; -moz-box-shadow:0px 4px 10px #999; -webkit-box-shadow:0px 4px 10px #999; margin-bottom:20px; padding:20px; width:205px; min-height:100px;}
+.portletWrapper { background:#FFF; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; box-shadow:0px 4px 10px #999; -moz-box-shadow:0px 4px 10px #999; -webkit-box-shadow:0px 4px 10px #999; margin-bottom:20px; padding:10px; width:225px; min-height:100px;}
 
 aside.sidebar { display:inline-block; float:right; }
 
@@ -421,86 +425,15 @@ section#saldo ul li, section#transaktioner ul li { height:25px; padding:0px 10px
 
 .menu a.tile{ background: url("images/orange_gradient.png") repeat-x scroll 0 0 transparent; clear: both; color: #FFFFFF; display: block; float: right; margin-right: 20px; margin-top: 1px; padding: 7px 15px; text-transform: uppercase; }
 
-.documentFirstHeading { color:#ea9606; font-size:20px; margin-top: 30px; margin-bottom:20px; }
-.documentDescription  { color:#757575; font-size:15px; margin-top: 0;}
+.documentFirstHeading { color:#ea9606; font-size:20px; margin-bottom:10px; }
+.documentDescription  { color:#757575; font-size:15px; }
 .tileHeadline  a { color:#757575; font-size:16px; margin-bottom:10px;}
 .tileFooter {border-bottom:1px dashed #CCC;}
 .image-inline { margin-left: 20px; padding: 4px;}
 .headline a { color:#757575; font-size:17px; }
 #viewlet-above-content-body { margin:22px; }
-/* Popup 
-================================================== */
-.popup {
-	width: 500px;
-	margin: 0 auto; 
-	background-color: #FFFFFF;
-    border-radius: 8px 8px 8px 8px;
-}
-.popup_header {
-	background-color: #4f4c4a;
-    border-radius: 8px 8px 0 0;
-	height: 20px;
-	padding: 15px;
-}
-.popup_heading {
-	float: left;
-}
-.popup_heading h3{
-   color: #FFFFFF;
-}
-.popup_close {
-    background-image: url("images/pb_close.png");
-    cursor: pointer;
-    float: right;
-    height: 28px;
-    width: 28px;
-	margin-top: -5px;
-}
-.popup_main {
-	background-color: #fbfaf9;
-	padding: 35px 57px;
-	text-align: center;
-}
-.popup_main h2 {
-	color: #A0A0A0;
-	font-size: 23pt;
-	font-weight: normal;
-	line-height: 30pt;
-}
-.popup_main input{
-    background-color: #FFFFFF;
-    border: 2px solid #E4E4E4;
-    border-radius: 3px 3px 3px 3px;
-    margin: 4px;
-    padding-left: 10px;
-    width: 200px;
-	height: 35px;
-	color: #A2A2A2;
-}
-.popup_main  p {
-	padding: 20px 0 10px;
-	color: #707070;
-	text-align: left;
-	line-height: 17pt;
-}
-.popup_footer {
-	background-color: #e8e5e3;
-    border-radius: 0 0 8px 8px;
-	padding: 8px 25px 10px 0px;
-	text-align: right;
-}
-.popup_footer input {
-    background-color: #EA9606;
-    border: 0 none;
-    border-radius: 4px 4px 4px 4px;
-    color: #FFFFFF;
-    font-size: 10pt;
-    font-weight: bold;
-    height: 35px;
-    margin: 5px;
-    padding: 0 11px;
-    width: auto;
-}
+
+
 /* Payment View
 ================================================== */
 #main section .transaction-wrapper {
@@ -584,11 +517,85 @@ section#saldo ul li, section#transaktioner ul li { height:25px; padding:0px 10px
 
 
 
-/* RESPONSIVE - MOBIL DEVICE 
+
+/* Popup */
+.popup {
+	width: 500px;
+	margin: 0 auto; 
+	background-color: #FFFFFF;
+    border-radius: 8px 8px 8px 8px;
+}
+.popup_header {
+	background-color: #4f4c4a;
+    border-radius: 8px 8px 0 0;
+	height: 20px;
+	padding: 15px;
+}
+.popup_heading {
+	float: left;
+}
+.popup_heading h3{
+   color: #FFFFFF;
+}
+.popup_close {
+    background-image: url("images/pb_close.png");
+    cursor: pointer;
+    float: right;
+    height: 28px;
+    width: 28px;
+	margin-top: -5px;
+}
+.popup_main {
+	background-color: #fbfaf9;
+	padding: 35px 57px;
+	text-align: center;
+}
+.popup_main h2 {
+	color: #A0A0A0;
+	font-size: 23pt;
+	font-weight: normal;
+	line-height: 30pt;
+}
+.popup_main input{
+    background-color: #FFFFFF;
+    border: 2px solid #E4E4E4;
+    border-radius: 3px 3px 3px 3px;
+    margin: 4px;
+    padding-left: 10px;
+    width: 200px;
+	height: 35px;
+	color: #A2A2A2;
+}
+.popup_main  p {
+	padding: 20px 0 10px;
+	color: #707070;
+	text-align: left;
+	line-height: 17pt;
+}
+.popup_footer {
+	background-color: #e8e5e3;
+    border-radius: 0 0 8px 8px;
+	padding: 8px 25px 10px 0px;
+	text-align: right;
+}
+.popup_footer input {
+    background-color: #EA9606;
+    border: 0 none;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 35px;
+    margin: 5px;
+    padding: 0 11px;
+    width: auto;
+}
+	/* Responsive Mobile device (iPhone Portrait)
 ================================================== */
-	@media only screen and (max-width: 520px) {
+	@media only screen and (max-width: 480px) {
 		.popup {
-			width: 99% !important;
+			width: 290px !important;
+			margin-left: 2px;
 		}
 		.popup_main {
 			padding: 25px 17px;		
@@ -598,7 +605,19 @@ section#saldo ul li, section#transaktioner ul li { height:25px; padding:0px 10px
 		}
 	}
 	
+	/* Responsive Mobile device (iPhone Landscape)
+================================================== */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {	
+		.popup {
+			width: 435px;
+			margin-left: 5px;
+		}
+		body {
+			padding-top: 5px !important;
+		}	
+
 /* Slut stilar tillagda av Pål */
+
 
 
 /* TRANSAKTIONER */
@@ -629,20 +648,8 @@ img.alignright { padding:4px; display:inline; float:right; margin-left:20px; }
 
 /* GENERELL CSS */
 input:focus { outline:none; }
-input { 
 
-    background-color: #FFFFFF;
-    border: 2px solid #E4E4E4;
-    border-radius: 3px 3px 3px 3px;
-    margin: 4px;
-    padding-left: 10px;
-    width: 200px;
-	height: 35px;
-	color: #404040;
-
-/* padding-left:3px; background:url(images/input_bg.png) no-repeat center top; width:165px; height:32px; border:1px solid #999; margin: 2px; */
-
-}
+input { padding-left:3px; background:url(images/input_bg.png) no-repeat center top; width:165px; height:32px; border:1px solid #999; margin: 2px; }
 
 .submit { background:url(images/orange_gradient.png) repeat-x center; color:#FFF; padding:5px 15px; border:0px; border-radius:6px; width:93px; }
 
@@ -654,6 +661,9 @@ input {
 #menu_min_sida {margin-top:-9px;color:#fff;}
 ul.min_sida {margin-right:-20px;}
 div.news_tile {margin-left:-350px;}
+
+
+
 
 /* Portal message */
 .portalMessage {
@@ -683,3 +693,13 @@ content: "■";
 color: #ea9606;
 padding-left: 0.2em;
 }
+
+/* wizard */
+li.wizard-step-link {
+	float:left;
+}
+
+li.wizard-step-link.selected {
+	color: green;
+}
+
